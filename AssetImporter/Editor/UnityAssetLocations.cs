@@ -441,11 +441,6 @@ public static class UnityAssetLocations
             "Easy Character Movement",
             "Oscar Gracin\\Complete ProjectsSystems\\Easy Character Movement"
         },
-        #endregion
-    };
-
-    public static Dictionary<string, string> Sabi = new Dictionary<string, string>()
-    {
         { "SABI_AI", "_SABI\\Sabi\\SABI_AI" },
         { "SABI_AudioManager", "_SABI\\Sabi\\SABI_AudioManager" },
         { "SABI_AutoSave", "_SABI\\Sabi\\SABI_AutoSave" },
@@ -453,5 +448,274 @@ public static class UnityAssetLocations
         { "SABI_FPS", "_SABI\\Sabi\\SABI_FPS" },
         { "SABI_INSPECTOR", "_SABI\\Sabi\\SABI_INSPECTOR" },
         { "SABI_INSPECTOR_BUTTON", "_SABI\\Sabi\\SABI_INSPECTOR_BUTTON" },
+        #endregion
     };
+
+    #region Catogary Based List
+    // public static Dictionary<string, string> Sabi = new Dictionary<string, string>()
+    // {
+    //     { "SABI_AI", "_SABI\\Sabi\\SABI_AI" },
+    //     { "SABI_AudioManager", "_SABI\\Sabi\\SABI_AudioManager" },
+    //     { "SABI_AutoSave", "_SABI\\Sabi\\SABI_AutoSave" },
+    //     { "SABI_C#++", "_SABI\\Sabi\\SABI_C#++" },
+    //     { "SABI_FPS", "_SABI\\Sabi\\SABI_FPS" },
+    //     { "SABI_INSPECTOR", "_SABI\\Sabi\\SABI_INSPECTOR" },
+    //     { "SABI_INSPECTOR_BUTTON", "_SABI\\Sabi\\SABI_INSPECTOR_BUTTON" },
+    // };
+
+    public static List<string> WorldCreation =
+        new()
+        {
+            "GaiaCore",
+            "Very Animation",
+            "Prefab World Builder",
+            "GaiaStamp",
+            "UModelerX",
+            "Gena",
+            "Stylized Water 2",
+            "Eqo Ambience Creator",
+            "AllSky",
+        };
+
+    public static List<string> CharacterControl =
+        new()
+        {
+            "Easy Character Movement",
+            "Easy Character Movement 2",
+            "Physics Character Controller",
+            "Kinematic Character Controller",
+            "NeoFPS",
+            "Simple Bicycle Physics",
+            "Aurora FPS Engine",
+            "FPS Engine",
+            "Game Kit Controller",
+        };
+
+    public static List<string> AnimationTools =
+        new()
+        {
+            "Eyes Animator",
+            "Leaning Animator",
+            "Bones Stimulator",
+            "Look Animator",
+            "Tail Animator",
+            "Ragdoll Animator",
+            "ULTIMATE ANIMATION COLLECTION",
+            "Everyday Motion Pack",
+            "Zombie Mocap Animation",
+            "Very Animation",
+            "Animated Hands with Weapons Pack",
+        };
+
+    public static List<string> AIAndBehavior =
+        new()
+        {
+            "Blaze AI Engine",
+            "Navmesh Path Draw",
+            "AI Tree",
+            "Mobile Traffic System v2.0",
+            "Emerald AI 3.0",
+            "SensorToolkit 2",
+            "Dialogue System for Unity",
+        };
+
+    public static List<string> EditorEnhancements =
+        new()
+        {
+            "Quantum Console",
+            "Editor Console Pro",
+            "Odin Inspector and Serializer",
+            "Build Report Tool",
+            "Rainbow Folders 2",
+            "Component Names",
+            "Asset Cleaner PRO",
+            "Ultimate Editor Enhancer",
+            "Script Inspector 3",
+            "Fullscreen Editor",
+        };
+
+    public static List<string> EnvironmentAssets =
+        new()
+        {
+            "Advanced Foliage Pack",
+            "Advanced Rock Pack",
+            "Dynamic Nature",
+            "Forest Environment",
+            "Meadow Environment",
+            "Mountain Environment",
+            "Athazagoraphobia Stylized Jungles",
+            "Hylophobia Stylized Forest",
+            "Toon Fantasy Nature",
+            "Low Poly Ultimate Pack",
+        };
+
+    public static List<string> VFXAndGraphics =
+        new()
+        {
+            "All In 1 Vfx Textures",
+            "All In 1 Vfx Toolkit",
+            "Mesh Effects",
+            "Dynamic Shadow Projector",
+            "100 Special Skills Effects Pack",
+            "Volumetric Blood Fluids",
+            "Easy Performant Outline",
+            "Curved World",
+        };
+
+    public static List<string> OptimizationTools =
+        new()
+        {
+            "MeshCombiner",
+            "SkinnedMeshCombiner",
+            "LODSystem",
+            "Optimizers",
+            "Impostors - Runtime Optimization",
+        };
+    #endregion
+
+
+
+    #region Developer based list
+    public static List<string> NatureManufactureAssets =
+        new()
+        {
+            "Advanced Foliage Pack",
+            "Advanced Rock Pack",
+            "Park Photo Scanned",
+            "Dynamic Nature",
+            "PBR Graveyard and Nature",
+            "Autumn Valley - Level",
+            "River Valley - Level",
+            "Winter Mountains and Stamps",
+            "Forest Environment",
+            "Meadow Environment",
+            "Mountain Environment",
+            "Lava Volcano Environment 2019",
+            "Ice World",
+            "Landscape Ground Pack",
+            "Landscape Ground Pack 2",
+            "Winter Ground Pack",
+        };
+
+    public static List<string> ProceduralWorldsAssets =
+        new() { "GaiaCore", "GaiaStamp", "Gena", "Gaia Pack", "Ambient Sounds" };
+    public static List<string> Sabi =
+        new()
+        {
+            "SABI_AI",
+            "SABI_AudioManager",
+            "SABI_INSPECTOR",
+            "SABI_INSPECTOR_BUTTON",
+            "SABI_AutoSave",
+            "SABI_C#++",
+            "SABI_FPS",
+        };
+
+    public static List<string> MalberAnimationsAssets =
+        new()
+        {
+            "Horse Animset Pro",
+            "Poly Art Animal Forest Set",
+            "Poly Art Bear",
+            "Poly Art Boars",
+            "Poly Art Cougars and Panthers",
+            "Poly Art Deer",
+            "Poly Art Fox",
+            "Poly Art Moose",
+            "Poly Art Rabbit",
+            "Poly Art Raccoon",
+            "Poly Art Ravens Crows",
+            "Poly Art Tiger",
+            "Poly Art Wolf",
+            "Undead Horse Knight",
+            "Poly Art Crocodile",
+            "Drake the Dragonkin",
+            "Little Dragons Sea",
+            "Little Dragons Tiger",
+            "Animal Controller",
+        };
+
+    public static List<string> FImpossibleCreationsAssets =
+        new()
+        {
+            "Eyes Animator",
+            "Leaning Animator",
+            "Optimizers",
+            "Bones Stimulator",
+            "Ground Fitter",
+            "Look Animator",
+            "Tail Animator",
+            "Ragdoll Animator",
+        };
+
+    public static List<string> LayerLabAssets =
+        new()
+        {
+            "GUI - Casual Fantasy",
+            "GUI Pro - Casual Game",
+            "GUI Pro - Fantasy RPG",
+            "GUI Pro - Simple Casual",
+        };
+
+    public static List<string> PolyperfectAssets =
+        new()
+        {
+            "Low Poly Ultimate Pack",
+            "Poly Universal Pack",
+            "Low Poly Animated Dinosaurs",
+            "Low Poly Animated People",
+        };
+
+    public static List<string> ProtofactorAssets =
+        new()
+        {
+            "HEROIC FANTASY CREATURES FULL PACK Volume 1",
+            "MONSTER FULL PACK VOL 1",
+            "SCI FI CHARACTERS MEGA PACK Vol 1",
+            "ULTIMATE ANIMATION COLLECTION",
+            "BIRDS PACK",
+            "ANIMALS FULL PACK",
+            "MONSTER MUSCOMORPH",
+            "Charcharosaurus",
+            "Gastaromorph",
+            "Lucanops",
+            "Scaramar",
+            "Tetrapuss",
+            "Tripodonte",
+        };
+
+    public static List<string> QuirkySeriesAssets =
+        new()
+        {
+            "Quirky Series - Animals Mega Pack Vol 1",
+            "Quirky Series - Animals Mega Pack Vol 2",
+            "Quirky Series - River Animals Vol 1",
+        };
+
+    public static List<string> DistantLandsAssets =
+        new()
+        {
+            "Aeronautics Low Poly Atmospheric Beasts",
+            "Cryptid Low Poly Monsters",
+            "Kaiju Low Poly Titans",
+            "Mindless Low Poly Zombies",
+            "Athazagoraphobia Stylized Jungles",
+            "Hylophobia Stylized Forest",
+            "COZY Stylized Weather 2",
+        };
+
+    public static List<string> MoreMountainsAssets =
+        new()
+        {
+            "Highroad Engine",
+            "TopDown Engine",
+            "InventoryEngine",
+            "MMFeedbacks",
+            "MMInterface",
+            "MMTools",
+        };
+
+    public static List<string> MTAssetsAssets =
+        new() { "MeshCombiner", "SkinnedMeshCombiner", "LODSystem" };
+    #endregion
 }
