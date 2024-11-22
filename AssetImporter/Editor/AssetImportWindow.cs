@@ -175,21 +175,6 @@ public class AssetImportWindow : EditorWindow
         #region Project Settings
         EditorGUILayout.LabelField("Project Settings", EditorStyles.boldLabel);
 
-        // Setup Common Project Settings
-        GUI.backgroundColor = new Color(0.9f, 0.8f, 0.7f);
-        if (
-            GUILayout.Button(
-                new GUIContent(
-                    "Setup Recommended Settings",
-                    EditorGUIUtility.IconContent("Settings").image
-                ),
-                GUILayout.Height(30)
-            )
-        )
-        {
-            SetupRecommendedSettings();
-        }
-
         // Version Control Setup
         GUI.backgroundColor = new Color(0.8f, 0.9f, 0.7f);
         if (
@@ -205,29 +190,6 @@ public class AssetImportWindow : EditorWindow
             SetupVersionControl();
         }
 
-        // New Lighting Setup Button
-        GUI.backgroundColor = new Color(0.8f, 0.9f, 0.7f);
-        if (
-            GUILayout.Button(
-                new GUIContent("Setup Lighting", EditorGUIUtility.IconContent("Lighting").image),
-                GUILayout.Height(30)
-            )
-        )
-        {
-            SetupLighting();
-        }
-
-        // New Physics Settings Button
-        GUI.backgroundColor = new Color(0.9f, 0.8f, 0.7f);
-        if (
-            GUILayout.Button(
-                new GUIContent("Setup Physics", EditorGUIUtility.IconContent("Physics").image),
-                GUILayout.Height(30)
-            )
-        )
-        {
-            SetupPhysics();
-        }
         #endregion
 
         GUILayout.Space(10);
@@ -745,30 +707,13 @@ public class AssetImportWindow : EditorWindow
 
         if (categoriesFoldout)
         {
-            DrawCategorySection("World Creation", UnityAssetLocations.WorldCreation);
-            DrawCategorySection("Character Control", UnityAssetLocations.CharacterControl);
-            DrawCategorySection("Animation Tools", UnityAssetLocations.AnimationTools);
-            DrawCategorySection("AI & Behavior", UnityAssetLocations.AIAndBehavior);
-            DrawCategorySection("Editor Enhancements", UnityAssetLocations.EditorEnhancements);
-            DrawCategorySection("Environment Assets", UnityAssetLocations.EnvironmentAssets);
-            DrawCategorySection("VFX & Graphics", UnityAssetLocations.VFXAndGraphics);
-            DrawCategorySection("Optimization Tools", UnityAssetLocations.OptimizationTools);
-
+            foreach (var item in UnityAssetLocations.Catogarys.Keys)
+                DrawCategorySection(item, UnityAssetLocations.Catogarys[item]);
             GUILayout.Space(5);
             EditorGUILayout.LabelField("Publishers", EditorStyles.boldLabel);
             GUILayout.Space(5);
-            DrawCategorySection("Sabi", UnityAssetLocations.Sabi);
-            DrawCategorySection("Nature Manufacture", UnityAssetLocations.NatureManufactureAssets);
-            DrawCategorySection("Procedural Worlds", UnityAssetLocations.ProceduralWorldsAssets);
-            DrawCategorySection("Malber Animations", UnityAssetLocations.MalberAnimationsAssets);
-            DrawCategorySection("FImpossible", UnityAssetLocations.FImpossibleCreationsAssets);
-            DrawCategorySection("Layer Lab", UnityAssetLocations.LayerLabAssets);
-            DrawCategorySection("Polyperfect", UnityAssetLocations.PolyperfectAssets);
-            DrawCategorySection("Protofactor", UnityAssetLocations.ProtofactorAssets);
-            DrawCategorySection("Quirky Series", UnityAssetLocations.QuirkySeriesAssets);
-            DrawCategorySection("Distant Lands", UnityAssetLocations.DistantLandsAssets);
-            DrawCategorySection("More Mountains", UnityAssetLocations.MoreMountainsAssets);
-            DrawCategorySection("MT Assets", UnityAssetLocations.MTAssetsAssets);
+            foreach (var item in UnityAssetLocations.Publishers.Keys)
+                DrawCategorySection(item, UnityAssetLocations.Publishers[item]);
         }
 
         EditorGUILayout.EndVertical();
@@ -777,28 +722,10 @@ public class AssetImportWindow : EditorWindow
     private void SetAllCategoryFoldouts(bool value)
     {
         // Add all your category names here
-        string[] categories =
-        {
-            "World Creation",
-            "Character Control",
-            "Animation Tools",
-            "AI & Behavior",
-            "Editor Enhancements",
-            "Environment Assets",
-            "VFX & Graphics",
-            "Optimization Tools",
-            "Nature Manufacture",
-            "Procedural Worlds",
-            "Malber Animations",
-            "FImpossible",
-            "Layer Lab",
-            "Polyperfect",
-            "Protofactor",
-            "Quirky Series",
-            "Distant Lands",
-            "More Mountains",
-            "MT Assets",
-        };
+        List<string> categories = new List<string>();
+
+        categories.AddRange(UnityAssetLocations.Catogarys.Keys);
+        categories.AddRange(UnityAssetLocations.Publishers.Keys);
 
         foreach (var category in categories)
         {
@@ -1040,57 +967,6 @@ public class AssetImportWindow : EditorWindow
             || content.Contains("[CustomEditor")
             || content.Contains("[CustomPropertyDrawer")
             || content.Contains("EditorWindow");
-    }
-
-    private void SetupRecommendedSettings()
-    {
-        if (
-            !EditorUtility.DisplayDialog(
-                "Setup Project Settings",
-                "This will configure recommended project settings. Continue?",
-                "Yes",
-                "Cancel"
-            )
-        )
-            return;
-
-        try
-        {
-            // Version Control Mode
-            EditorSettings.externalVersionControl = "Visible Meta Files";
-            EditorSettings.serializationMode = SerializationMode.ForceText;
-
-            // Asset Serialization
-            EditorSettings.spritePackerMode = SpritePackerMode.AlwaysOnAtlas;
-
-            // Editor Settings
-            EditorSettings.enterPlayModeOptionsEnabled = true;
-            EditorSettings.enterPlayModeOptions = EnterPlayModeOptions.DisableDomainReload;
-
-            // Quality Settings
-            QualitySettings.vSyncCount = 0;
-            QualitySettings.antiAliasing = 0;
-
-            // Player Settings
-            PlayerSettings.stripUnusedMeshComponents = true;
-            PlayerSettings.bakeCollisionMeshes = true;
-
-            AssetDatabase.SaveAssets();
-            EditorUtility.DisplayDialog(
-                "Success",
-                "Project settings configured successfully!",
-                "OK"
-            );
-        }
-        catch (Exception e)
-        {
-            Debug.LogError($"Error configuring settings: {e.Message}");
-            EditorUtility.DisplayDialog(
-                "Error",
-                "Failed to configure settings. Check console for details.",
-                "OK"
-            );
-        }
     }
 
     private void SetupVersionControl()
@@ -1573,17 +1449,5 @@ crashlytics-build.properties
         {
             Debug.Log("No references found in scene.");
         }
-    }
-
-    private void SetupLighting()
-    {
-        // Implement lighting setup logic here
-        Debug.Log("Lighting setup configured.");
-    }
-
-    private void SetupPhysics()
-    {
-        // Implement physics setup logic here
-        Debug.Log("Physics setup configured.");
     }
 }
