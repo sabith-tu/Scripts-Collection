@@ -211,10 +211,6 @@ public static class UnityAssetLocations
             "PROTOFACTOR INC\\3D ModelsCharactersCreatures\\SCI FI CHARACTERS MEGA PACK Vol 1"
         },
         {
-            "ULTIMATE ANIMATION COLLECTION",
-            "PROTOFACTOR INC\\AnimationBipedal\\ULTIMATE ANIMATION COLLECTION"
-        },
-        {
             "BIRDS PACK",
             "Asset Store-5.x\\PROTOFACTOR INC\\3D ModelsCharactersAnimalsBirds\\BIRDS PACK"
         },
@@ -289,10 +285,6 @@ public static class UnityAssetLocations
             "Loknar Studio\\3D ModelsEnvironments\\Destroyed Building Kit"
         },
         { "AI Tree", "Renowned Games\\ScriptingAI\\AI Tree - Behavior Trees for Unity" },
-        {
-            "Animated Hands with Weapons Pack",
-            "Maksim Bugrimov\\3D ModelsCharacters\\Animated Hands with Weapons Pack"
-        },
         { "Mobile Traffic System v2.0", "Gley\\ScriptingAI\\Mobile Traffic System v20" },
         {
             "Universal Vehicle Controller",
@@ -309,7 +301,6 @@ public static class UnityAssetLocations
             "Smitesoft\\Editor ExtensionsPainting\\Colorize Texture Color Palette Modifier"
         },
         { "All In 1 Vfx Toolkit", "Seaside Studios\\VFX\\All In 1 Vfx Toolkit" },
-        { "Zombie Mocap Animation", "Yummy Games\\Animation\\Zombie Mocap Animation" },
         { "Quantum Console", "QFSW\\Editor ExtensionsUtilities\\Quantum Console" },
         {
             "NeoFPS",
@@ -326,7 +317,6 @@ public static class UnityAssetLocations
             "AndaSoft\\Editor ExtensionsTerrain\\EasyRoads3D Demo Project"
         },
         { "EasyRoads3D Pro v3", "AndaSoft\\Editor ExtensionsTerrain\\EasyRoads3D Pro v3" },
-        { "Everyday Motion Pack", "gizmozman\\AnimationBipedal\\Everyday Motion Pack" },
         {
             "KEKOS - Customizable 3D Character Cartoon Kids",
             "Mameshiba Games\\3D ModelsCharactersHumanoids\\KEKOS - Customizable 3D Character Cartoon Kids"
@@ -449,6 +439,101 @@ public static class UnityAssetLocations
         { "SABI_INSPECTOR", "_SABI\\Sabi\\SABI_INSPECTOR" },
         { "SABI_INSPECTOR_BUTTON", "_SABI\\Sabi\\SABI_INSPECTOR_BUTTON" },
         #endregion
+
+        // #region Animations
+        //{ "Hand to Hand Set", "" },
+        { "Kung-Fu animations", "Motion Cast\\Animation\\Kung-Fu animations Motion Cast06 Vol1" },
+        { "Omni Animation", "Opsive\\Animation\\Omni Animation - Core Locomotion Pack" },
+        { "Witch Hag Animations", "RamsterZ\\Animation\\Witch Hag Animations" },
+        { "Dialogue Anims", "RamsterZ\\Animation\\Dialogue Anims" },
+        {
+            "ULTIMATE ANIMATION COLLECTION",
+            "PROTOFACTOR INC\\AnimationBipedal\\ULTIMATE ANIMATION COLLECTION"
+        },
+        {
+            "Berserker Fighter Mecanim Animation Pack",
+            "Explosive\\AnimationBipedal\\Berserker Fighter Mecanim Animation Pack"
+        },
+        {
+            "Heavy Fighter Mecanim Animation Pack",
+            "Explosive\\AnimationBipedal\\Heavy Fighter Mecanim Animation Pack"
+        },
+        {
+            "Male Fighter Mecanim Animation Pack",
+            "Explosive\\AnimationBipedal\\Male Fighter Mecanim Animation Pack"
+        },
+        {
+            "Female Fighter Mecanim Animation Pack",
+            "Explosive\\AnimationBipedal\\Female Fighter Mecanim Animation Pack"
+        },
+        {
+            "Knight Warrior Mecanim Animation Pack",
+            "Explosive\\Animation\\Knight Warrior Mecanim Animation Pack"
+        },
+        {
+            "Spearman Warrior Mecanim Animation Pack",
+            "Explosive\\Animation\\Spearman Warrior Mecanim Animation Pack"
+        },
+        {
+            "Sorceress Warrior Mecanim Animation Pack",
+            "Explosive\\Animation\\Sorceress Warrior Mecanim Animation Pack"
+        },
+        {
+            "Swordsman Warrior Mecanim Animation Pack",
+            "Explosive\\Animation\\Swordsman Warrior Mecanim Animation Pack"
+        },
+        {
+            "Ninja Warrior Mecanim Animation Pack",
+            "Explosive\\Animation\\Ninja Warrior Mecanim Animation Pack"
+        },
+        {
+            "Karate Warrior Mecanim Animation Pack",
+            "Explosive\\Animation\\Karate Warrior Mecanim Animation Pack"
+        },
+        {
+            "Hammer Warrior Mecanim Animation Pack",
+            "Explosive\\Animation\\Hammer Warrior Mecanim Animation Pack"
+        },
+        {
+            "Crossbow Warrior Mecanim Animation Pack",
+            "Explosive\\Animation\\Crossbow Warrior Mecanim Animation Pack"
+        },
+        {
+            "Brute Warrior Mecanim Animation Pack",
+            "Explosive\\Animation\\Brute Warrior Mecanim Animation Pack"
+        },
+        {
+            "Archer Warrior Mecanim Animation Pack",
+            "Explosive\\Animation\\Archer Warrior Mecanim Animation Pack"
+        },
+        {
+            "2-Handed Warrior Mecanim Animation Pack",
+            "Explosive\\Animation\\2-Handed Warrior Mecanim Animation Pack"
+        },
+        {
+            "Mage Warrior Mecanim Animation Pack",
+            "Explosive\\Animation\\Mage Warrior Mecanim Animation Pack"
+        },
+        { "Nodachi AnimSet", "wemakethegame\\Animation\\Nodachi AnimSet" },
+        { "Fighter Pack Bundle", "Explosive\\AnimationBipedal\\Fighter Pack Bundle" },
+        {
+            "Crafting Mecanim Animation Pack",
+            "Explosive\\AnimationBipedal\\Crafting Mecanim Animation Pack"
+        },
+        { "Spear And Halberd Animset", "Kubold\\AnimationBipedal\\Spear And Halberd Animset" },
+        {
+            "RIFLE Basic - Mocap Animation Pack",
+            "MoCap Online\\AnimationBipedal\\RIFLE Basic - Mocap Animation Pack"
+        },
+        { "Zombie Mocap Animation", "Yummy Games\\Animation\\Zombie Mocap Animation" },
+        { "Everyday Motion Pack", "gizmozman\\AnimationBipedal\\Everyday Motion Pack" },
+        { "Giant Animations FREE", "Kevin Iglesias\\Animation\\Giant Animations FREE" },
+        { "Basic Motions", "" },
+        {
+            "Animated Hands with Weapons Pack",
+            "Maksim Bugrimov\\3D ModelsCharacters\\Animated Hands with Weapons Pack"
+        },
+        // #endregion
     };
 
     #region Catogary Based List
@@ -462,6 +547,8 @@ public static class UnityAssetLocations
     //     { "SABI_INSPECTOR", "_SABI\\Sabi\\SABI_INSPECTOR" },
     //     { "SABI_INSPECTOR_BUTTON", "_SABI\\Sabi\\SABI_INSPECTOR_BUTTON" },
     // };
+
+
 
     public static List<string> WorldCreation =
         new()
@@ -500,10 +587,42 @@ public static class UnityAssetLocations
             "Look Animator",
             "Tail Animator",
             "Ragdoll Animator",
-            "ULTIMATE ANIMATION COLLECTION",
-            "Everyday Motion Pack",
-            "Zombie Mocap Animation",
             "Very Animation",
+        };
+
+    public static List<string> AnimationPacks =
+        new()
+        {
+            "Kung-Fu animations",
+            "Omni Animation",
+            "Witch Hag Animations",
+            "Dialogue Anims",
+            "ULTIMATE ANIMATION COLLECTION",
+            "Berserker Fighter Mecanim Animation Pack",
+            "Heavy Fighter Mecanim Animation Pack",
+            "Male Fighter Mecanim Animation Pack",
+            "Female Fighter Mecanim Animation Pack",
+            "Knight Warrior Mecanim Animation Pack",
+            "Spearman Warrior Mecanim Animation Pack",
+            "Sorceress Warrior Mecanim Animation Pack",
+            "Swordsman Warrior Mecanim Animation Pack",
+            "Ninja Warrior Mecanim Animation Pack",
+            "Karate Warrior Mecanim Animation Pack",
+            "Hammer Warrior Mecanim Animation Pack",
+            "Crossbow Warrior Mecanim Animation Pack",
+            "Brute Warrior Mecanim Animation Pack",
+            "Archer Warrior Mecanim Animation Pack",
+            "2-Handed Warrior Mecanim Animation Pack",
+            "Mage Warrior Mecanim Animation Pack",
+            "Nodachi AnimSet",
+            "Fighter Pack Bundle",
+            "Crafting Mecanim Animation Pack",
+            "Spear And Halberd Animset",
+            "RIFLE Basic - Mocap Animation Pack",
+            "Zombie Mocap Animation",
+            "Everyday Motion Pack",
+            "Giant Animations FREE",
+            "Basic Motions",
             "Animated Hands with Weapons Pack",
         };
 
@@ -717,5 +836,40 @@ public static class UnityAssetLocations
 
     public static List<string> MTAssetsAssets =
         new() { "MeshCombiner", "SkinnedMeshCombiner", "LODSystem" };
+
+    public static Dictionary<string, List<string>> Catogarys = new Dictionary<
+        string,
+        List<string>
+    >()
+    {
+        { "World Creation", WorldCreation },
+        { "Character Control", CharacterControl },
+        { "Animation Tools", AnimationTools },
+        { "Animation Packs", AnimationPacks },
+        { "AI Behavior", AIAndBehavior },
+        { "Editor Enhancements", EditorEnhancements },
+        { "Environment Assets", EnvironmentAssets },
+        { "VFX And Graphics", VFXAndGraphics },
+        { "Optimization Tools", OptimizationTools },
+    };
+
+    public static Dictionary<string, List<string>> Publishers = new Dictionary<
+        string,
+        List<string>
+    >()
+    {
+        { "Nature Manufacture", NatureManufactureAssets },
+        { "Procedural Worlds", ProceduralWorldsAssets },
+        { "Malber Animations", MalberAnimationsAssets },
+        { "FImpossible", FImpossibleCreationsAssets },
+        { "Layer", LayerLabAssets },
+        { "Polyperfect", PolyperfectAssets },
+        { "Protofactor", ProtofactorAssets },
+        { "Quirky Series", QuirkySeriesAssets },
+        { "Distant Lands", DistantLandsAssets },
+        { "More Mountains", MoreMountainsAssets },
+        { "MT", MTAssetsAssets },
+    };
+
     #endregion
 }
