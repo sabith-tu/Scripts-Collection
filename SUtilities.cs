@@ -35,18 +35,16 @@ public static class SUtilities
         bool spawnTextAlso = false
     )
     {
-        if (GameManager.Instance && !GameManager.Instance.CanUseDebugingFunctions)
-            return new GameObject();
         GameObject newObject = GameObject.CreatePrimitive(PrimitiveType.Sphere);
         newObject.transform.localScale = Vector3.one * (scale ?? 0.2f);
         newObject.transform.position = positionArg;
         newObject.name = "[loc] " + nameArg;
         newObject.GetComponent<Collider>().enabled = false;
         if (autoDestroyTime != null)
-            newObject.AddComponent<AutoDestroyableInGivenTime>().SetTime(autoDestroyTime.Value);
+            //newObject.AddComponent<AutoDestroyableInGivenTime>().SetTime(autoDestroyTime.Value);
 
-        if (color != null)
-            newObject.GetComponent<MeshRenderer>().material.color = (Color)color;
+            if (color != null)
+                newObject.GetComponent<MeshRenderer>().material.color = (Color)color;
         Log($"Created Sphere GameObject at {positionArg} with the name of {nameArg}");
         if (spawnTextAlso && nameArg != "Unnamed")
             CreateTextAtLocation(positionArg, nameArg, autoDestroyTime: autoDestroyTime);
@@ -100,8 +98,6 @@ public static class SUtilities
         float? autoDestroyTime = null
     )
     {
-        if (!GameManager.Instance.CanUseDebugingFunctions)
-            return null;
         GameObject obj = new GameObject("ShowTextAtLocation {text}");
         TextMeshPro textMesh = obj.AddComponent<TextMeshPro>();
         textMesh.text = text;
@@ -122,20 +118,6 @@ public static class SUtilities
     )
     {
         Log(message, context, color, (tag != null ? new string[] { tag } : null));
-    }
-
-    public static void Log(
-        string message,
-        bool useInGameLogAlso,
-        Object context = null,
-        string color = "yellow",
-        string[] tags = null
-    )
-    {
-        if (useInGameLogAlso)
-            InGameConsole.Log(message);
-
-        Log(message, context, color, tags);
     }
 
     public static void LogGameFlow(string message, Object context = null)
