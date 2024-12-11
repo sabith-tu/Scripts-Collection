@@ -26,7 +26,7 @@ public static class SUtilities
         return haveChance;
     }
 
-    public static GameObject CreateSphereAtLocation(
+   public static GameObject CreateSphereAtLocation(
         Vector3 positionArg,
         string nameArg = "Unnamed",
         Color? color = null,
@@ -35,19 +35,38 @@ public static class SUtilities
         bool spawnTextAlso = false
     )
     {
+        if (GameManager.Instance && !GameManager.Instance.CanUseDebugingFunctions)
+            return new GameObject();
         GameObject newObject = GameObject.CreatePrimitive(PrimitiveType.Sphere);
         newObject.transform.localScale = Vector3.one * (scale ?? 0.2f);
         newObject.transform.position = positionArg;
         newObject.name = "[loc] " + nameArg;
         newObject.GetComponent<Collider>().enabled = false;
         if (autoDestroyTime != null)
-            //newObject.AddComponent<AutoDestroyableInGivenTime>().SetTime(autoDestroyTime.Value);
+            newObject.AddComponent<AutoDestroyableInGivenTime>().SetTime(autoDestroyTime.Value);
 
-            if (color != null)
-                newObject.GetComponent<MeshRenderer>().material.color = (Color)color;
+        newObject.GetComponent<MeshRenderer>().material.color =
+            color ?? new Color(0.8f, 0.1f, 0.1f, 0.3f);
+
+        MeshRenderer meshRenderer = newObject.GetComponent<MeshRenderer>();
+        meshRenderer.material = Resources.Load<Material>("M_TransperentMaterial");
+
+        if (color != null)
+            meshRenderer.material.color = color.Value;
+
         Log($"Created Sphere GameObject at {positionArg} with the name of {nameArg}");
         if (spawnTextAlso && nameArg != "Unnamed")
-            CreateTextAtLocation(positionArg, nameArg, autoDestroyTime: autoDestroyTime);
+        {
+            float upOffset = 0.0f,
+                rightOffset = 0.0f;
+            CreateTextAtLocation(
+                positionArg
+                    + newObject.transform.right * rightOffset
+                    + newObject.transform.up * upOffset,
+                nameArg,
+                autoDestroyTime: autoDestroyTime
+            );
+        }
         return newObject;
     }
 
@@ -91,13 +110,15 @@ public static class SUtilities
             Debug.Log($"<size=8>[SAB]{tag}</size><color={color}><b> {message}</b></color>");
     }
 
-    public static TextMeshPro CreateTextAtLocation(
+   public static TextMeshPro CreateTextAtLocation(
         Vector3 location,
         string text,
         float fontSize = 1,
         float? autoDestroyTime = null
     )
     {
+        if (!GameManager.Instance.CanUseDebugingFunctions)
+            return null;
         GameObject obj = new GameObject("ShowTextAtLocation {text}");
         TextMeshPro textMesh = obj.AddComponent<TextMeshPro>();
         textMesh.text = text;
