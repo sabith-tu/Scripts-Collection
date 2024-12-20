@@ -26,24 +26,24 @@ public static class SUtilities
         return haveChance;
     }
 
-   public static GameObject CreateSphereAtLocation(
-        Vector3 positionArg,
-        string nameArg = "Unnamed",
-        Color? color = null,
-        float? scale = null,
-        float? autoDestroyTime = null,
-        bool spawnTextAlso = false
-    )
+    public static GameObject CreateSphereAtLocation(
+         Vector3 positionArg,
+         string nameArg = "Unnamed",
+         Color? color = null,
+         float? scale = null,
+         float? autoDestroyTime = null,
+         bool spawnTextAlso = false
+     )
     {
-        if (GameManager.Instance && !GameManager.Instance.CanUseDebugingFunctions)
-            return new GameObject();
         GameObject newObject = GameObject.CreatePrimitive(PrimitiveType.Sphere);
         newObject.transform.localScale = Vector3.one * (scale ?? 0.2f);
         newObject.transform.position = positionArg;
         newObject.name = "[loc] " + nameArg;
         newObject.GetComponent<Collider>().enabled = false;
-        if (autoDestroyTime != null)
-            newObject.AddComponent<AutoDestroyableInGivenTime>().SetTime(autoDestroyTime.Value);
+        // if (autoDestroyTime != null)
+        //     newObject.AddComponent<AutoDestroyableInGivenTime>().SetTime(autoDestroyTime.Value);
+
+
 
         newObject.GetComponent<MeshRenderer>().material.color =
             color ?? new Color(0.8f, 0.1f, 0.1f, 0.3f);
@@ -110,15 +110,13 @@ public static class SUtilities
             Debug.Log($"<size=8>[SAB]{tag}</size><color={color}><b> {message}</b></color>");
     }
 
-   public static TextMeshPro CreateTextAtLocation(
-        Vector3 location,
-        string text,
-        float fontSize = 1,
-        float? autoDestroyTime = null
-    )
+    public static TextMeshPro CreateTextAtLocation(
+         Vector3 location,
+         string text,
+         float fontSize = 1,
+         float? autoDestroyTime = null
+     )
     {
-        if (!GameManager.Instance.CanUseDebugingFunctions)
-            return null;
         GameObject obj = new GameObject("ShowTextAtLocation {text}");
         TextMeshPro textMesh = obj.AddComponent<TextMeshPro>();
         textMesh.text = text;
